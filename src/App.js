@@ -4,7 +4,9 @@ import Register from './pages/Register.js';
 import Login from './pages/Login.js';
 import Dashboard from './pages/Dashboard.js';
 import Home from './pages/Home.js';
-import Shop from './pages/Shop.js';
+import ProductList from './ProductList.js';
+import AddProduct from './AddProducts.js';
+
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -21,7 +23,9 @@ const App = () => {
       <Routes>
       <Route path="/" element={<Home/>} />
         <Route path="/register" element={<Register />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/admin/add-product" element={<AddProduct />} />
+        <Route path="/shop" element={<ProductList/>} />
+        <Route path="api/products" element={<ProductList/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} />
       </Routes>
