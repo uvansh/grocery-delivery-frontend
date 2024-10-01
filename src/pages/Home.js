@@ -29,17 +29,21 @@ const Home = () => {
         <h2>Shop by Category</h2>
         <div className="categories">
           <div className="category">
-            <img src="./images/Fruites.jpg" alt="Fruits" />
-            <h3>Fruits</h3>
+            <Link className="category-link" to='/category/fruits'><img src="./images/Fruites.jpg" alt="Fruits" />
+            <h3>Fresh Fruits</h3>
+            </Link>  
           </div>
           <div className="category">
+            <Link className="category-link" to='/category/vegitables'> 
             <img src="./images/vegitable.jpg" alt="Vegetables" />
-            <h3>Vegetables</h3>
-
+            <h3 className="category-link">Fresh Vegetables</h3>
+            </Link>
           </div>
           <div className="category">
+            <Link className="category-link" to="/category/dairy">
             <img src="./images/dairy.jpg" alt="Dairy" />
             <h3>Dairy Products</h3>
+            </Link>
           </div>
         </div>
       </section>

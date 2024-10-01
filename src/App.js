@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard.js';
 import Home from './pages/Home.js';
 import ProductList from './ProductList.js';
 import AddProduct from './AddProducts.js';
-
+import Category from './components/Category.js';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -28,6 +28,9 @@ const App = () => {
         <Route path="api/products" element={<ProductList/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} />
+        <Route path="/category/:categoryName" element={<Category/>} />
+        <Route path="/category/:categoryName" element={<Category/>} />
+        <Route path="/category/:categoryName" element={<Category/>} />
       </Routes>
     </Router>
   );

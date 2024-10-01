@@ -65,6 +65,13 @@ body {
   .category img {
     width: 100%;
     border-radius: 5px;
+    height: 150px;
+  }
+  .category img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
   footer {
@@ -75,3 +82,7 @@ body {
     margin-top: 50px;
   }
   
+  .category .category-link {
+    color: black;
+    text-decoration: none;
+  }
